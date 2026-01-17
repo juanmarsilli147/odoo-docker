@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_wallet_account,wallet.account,model_wallet_account,base.group_user,1,1,1,1
+access_wallet_transaction,wallet.transaction,model_wallet_transaction,base.group_user,1,1,1,1
+access_wallet_deposit_wizard,wallet.deposit.wizard,model_wallet_deposit_wizard,base.group_user,1,1,1,1
+access_wallet_transfer_wizard,wallet.transfer.wizard,model_wallet_transfer_wizard,base.group_user,1,1,1,1
