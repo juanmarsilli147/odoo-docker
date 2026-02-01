@@ -7,7 +7,7 @@
     "author": "Juan Marsilli",
     "depends": ["base"],
     "data": [
-        "views/views.xml",
+        "security/ir.model.access.csv",
     ],
     "application": True,
 }
