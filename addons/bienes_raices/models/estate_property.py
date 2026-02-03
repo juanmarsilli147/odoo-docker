@@ -15,6 +15,8 @@ class EstateProperty(models.Model):
         ('sold', 'Sold'),
         ('canceled', 'Canceled'),
     ], string="State", default='new')
+    property_type_id = fields.Many2one(comodel_name='estate.property.type', string="Property Type")
+    tag_ids = fields.Many2many(comodel_name='estate.property.tag', string="Property Tags", widget="many2many_tags")
     bedrooms = fields.Integer(string="Bed Rooms", default=2)
     living_area = fields.Integer(string="Living Area")
     facades = fields.Integer(string="Facades")
@@ -31,6 +33,9 @@ class EstateProperty(models.Model):
     garden = fields.Boolean(string="Garden")
     expected_price = fields.Float(string="Expected Price", required=True)
     selling_price = fields.Float(string="Selling Price", readonly=True, copy=False)
+    buyer_id = fields.Many2one(comodel_name='res.partner', string="Buyer")
+    salesperson_id = fields.Many2one(comodel_name='res.users', string="Salesperson")
+    offer_ids = fields.One2many(comodel_name='estate.property.offer', inverse_name='property_id', string="Offers")
     
     
     

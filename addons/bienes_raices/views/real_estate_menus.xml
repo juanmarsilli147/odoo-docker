@@ -7,8 +7,25 @@
               name="Anuncios" 
               parent="estate_property_menu_root"/>
 
+    <menuitem id="estate_property_type_menu_main" 
+              name="Configuración" 
+              parent="estate_property_menu_root"/>
+
     <menuitem id="estate_property_menu_action" 
               name="Ver Anuncios" 
               parent="estate_property_menu_main" 
               action="estate_property_action"/>
+
+    <menuitem id="estate_property_tag_menu_item" 
+              name="Tags de Propiedad" 
+              parent="estate_property_type_menu_main" 
+              action="estate_property_tag_action"/>
+
+    <menuitem id="estate_property_type_menu_item" 
+              name="Tipos de Propiedad" 
+              parent="estate_property_type_menu_main" 
+              action="estate_property_type_action"/>
+    
+    
+
 </odoo>
